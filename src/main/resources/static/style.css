@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playball');
+
+body {
+  background: url("https://res.cloudinary.com/synee/image/upload/c_scale,w_1879/v1534298079/Webp.net-compress-image_cmv2xf.jpg");
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  padding: 5px 25px;
+  margin: 0;
+  color: white;
+}
+h1{
+	color: white;
+  	font-family: "Playball";
+	width: 65%;
+	padding-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	text-align: center;
+}
+#reg{
+	color: white;
+  	font-family: "Playball";
+	width: 65%;
+	padding-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	text-align: center;
+}
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: gray;
+}
+
+/* mouse over link */
+a:hover {
+    color: gray;
+}
+
+/* selected link */
+a:active {
+    color: gray;
+}
+
+
+table, th{
+  background-color: black;
+  font-family: "Merriweather";
+  color: white;
+  opacity: 0.8;
+  padding: 10px;
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: auto;
+}
+th{
+  text-align: left;
+}
+td{
+  padding-left: 10px;
+}
+#noBorder{
+  border: 0px solid black;
+  padding-left: 50px;
+}
+#alignRight{
+  text-align: left;
+}
+
+input{
+	line-width: 150px;
+	border-bottom-left-radius: 10px;
+  	border-bottom-right-radius: 10px;
+  	border-top-left-radius: 10px;
+  	border-top-right-radius: 10px;
+  	
+}
+
+input[type=submit]{
+  width:50%;
+}
+
+
