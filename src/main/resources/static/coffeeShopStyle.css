@@ -9,7 +9,6 @@ body {
   background-attachment: fixed;
   background-size:  cover;
   background-color: #999;
-  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   padding: 5px 25px;
   margin: 0;
@@ -54,25 +53,49 @@ a:hover {
 a:active {
     color: gray;
 }
-
-
-table, th{
+.center{
+	padding: 10px;
+ 	margin: auto 0px 0px 70%;
+}
+.centerThis{
+	padding: 10px 10px 10px 10px;
+ 	margin: auto 0px 0px 3%;
+}
+.centerThis button{
+	padding: 10px;
+ 	margin: auto 0px 0px 40%;
+}
+.contentBlock{
   background-color: black;
   font-family: "Merriweather";
   color: white;
   opacity: 0.8;
   padding: 10px;
-  width: 65%;
-  margin-right: auto;
-  margin-left: auto;
+  width: 60%;
+  margin: auto auto auto auto;
   border-radius: 15px 15px 15px 15px;
-  margin-bottom: auto;
 }
+
+.contentBlockAdmin{
+  background-color: black;
+  font-family: "Merriweather";
+  color: white;
+  padding: 10px;
+  width: 70%;
+  margin: auto auto auto auto;
+  border-radius: 15px 15px 15px 15px;
+}
+table{
+	
+	
+}
+
 th{
   text-align: left;
 }
 td{
   padding-left: 10px;
+  padding-bottom: 2px;
 }
 #noBorder{
   border: 0px solid black;

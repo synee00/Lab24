@@ -28,49 +28,39 @@ public class CoffeeShopPlusController {
 	@RequestMapping("/")
 	public ModelAndView showHomePage()
 	{
-		/*Items items = new Items();
-		ModelAndView mav = new ModelAndView("index");
-		mav.addObject("items", items);
-
-		return mav;*/
 		
 		List<Items> items = itemsDao.findAll();
 		return new ModelAndView("index", "items", items);
 		
 	}
-	@RequestMapping("/addItem")
-	public ModelAndView addItem()
-	{
-		ModelAndView mav = new ModelAndView("addItem");
-		return mav;
-	}
+	
 	@RequestMapping("/add-submit")
-	public ModelAndView submitAddForm(@PathParam("name") String name,
-			@PathParam("description") String description,
-			@PathParam("quantity") int quantity,
-			@PathParam("price") float price)
+	public ModelAndView submitAddForm(Items item)
 	{
-		Items item = new Items();
-		
-		item.setName(name);;
-		item.setDescription(description);;
-		item.setQuantity(quantity);
-		item.setPrice(price);
 		
 		itemsDao.create(item);
 		
-		ModelAndView mav = new ModelAndView("redirect:/");
-		mav.addObject("item", item);
+		ModelAndView mav = new ModelAndView("redirect:/adminHomepage");
 
-		
-		//mav.addObject("room", roomsDao.findById(id));
 		return mav;
 	}
+	
+	@RequestMapping("/edit-submit")
+	public ModelAndView submitEditForm(Items item)
+	{
+		
+		itemsDao.update(item);
+		
+		ModelAndView mav = new ModelAndView("redirect:/adminHomepage");
+		
+		return mav;
+	}
+	
 	@RequestMapping("/delete")
 	public ModelAndView showDelete(@RequestParam("id") Long id)
 	{
 		itemsDao.delete(id);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/adminHomepage");
 
 		
 	}

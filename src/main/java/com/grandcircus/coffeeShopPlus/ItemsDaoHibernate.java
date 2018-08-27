@@ -42,7 +42,17 @@ public class ItemsDaoHibernate {
 		em.persist(item); 
 
 	}
-	
+	public void update(Items item)
+	{
+		em.merge(item);
+		/*String sql = "UPDATE Items SET name=\'" + item.getName() 
+						+ "\', description=\'" + item.getDescription() 
+						+ "\', quantity=" + item.getQuantity()
+						+ ", price=" + item.getPrice()
+						+ "  WHERE id=" + item.getId();
+		em.createQuery(sql).executeUpdate();*/
+
+	}
 	public void delete(Long id)
 	{
 		// Deleting with Hibernate entity manager requires fetching a reference first.
